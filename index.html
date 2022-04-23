@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>VR Exhibition</title>
+		<meta charset="utf-8" name="description" content="">
+
+		<!-- aframe script -->
+		<script
+			src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1f00d0beadf87bad7d275c174616e048f8b573fc/dist/aframe-master.min.js">
+		</script>
+
+		<!-- other component -->
+		<script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+		<script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js">
+		</script>
+		<script src="https://cdn.jsdelivr.net/gh/colinfizgig/aframe_Components/components/camera-cube-env.js"></script>
+		<script src="./js/aframe-room-component.js"></script>
+
+	</head>
+
+	<body>
+		<a-assets>
+			<a-assets-item id="sculpture" src="./assets/model/Art/scene.gltf"></a-assets-item>
+			<img id="art01" src="./assets/Paint/Art01.JPG">
+			<img id="art02" src="./assets/Paint/Art02.JPG">
+			<img id="art03" src="./assets/Paint/Art03.JPG">
+			<img id="art04" src="./assets/Paint/Art04.JPG">
+			<img id="art05" src="./assets/Paint/Art05.JPG">
+			<img id="art06" src="./assets/Paint/Art06.JPG">
+			<img id="art07" src="./assets/Paint/Art07.JPG">
+			<img id="art08" src="./assets/Paint/Art08.JPG">
+
+			<img id="chair" src="./assets/textures/Chair/wood.jpg">
+
+			<img id="floor" src="./assets/textures/Floor/TexturesCom_VersaillesParquet10_1K_albedo.jpg">
+			<img id="floor-normal" src="./assets/textures/Floor/TexturesCom_VersaillesParquet10_1K_normal.jpg">
+			<img id="floor-rough" src="./assets/textures/Floor/TexturesCom_VersaillesParquet10_1K_roughness.jpg">
+			<img id="floor-spec" src="./assets/textures/Floor/TexturesCom_VersaillesParquet10_1K_metallic.jpg">
+			<img id="floor-AO" src="./assets/textures/Floor/TexturesCom_VersaillesParquet10_1K_ao.jpg">
+
+
+			<img id="wall" src="./assets/textures/Wall/TexturesCom_Marble_TilesSquare8_512_albedo.jpg">
+			<img id="wall-normal" src="./assets/textures/Wall/TexturesCom_Marble_TilesSquare8_512_normal.jpg">
+			<img id="wall-rough" src="./assets/textures/Wall/TexturesCom_Marble_TilesSquare8_512_roughness.jpg">
+
+			<img id="Ceiling" src="./assets/textures/Ceiling/TexturesCom_WoodPanelOrnate02_512_albedo.jpg">
+			<img id="Ceiling-normal" src="./assets/textures/Ceiling/TexturesCom_WoodPanelOrnate02_512_normal.jpg">
+
+		</a-assets>
+
+		<a-scene background=" color:white">
+
+			<a-video src="./assets/Video/NFT Video.mp4" material="" geometry="" position="0 1.5 -11.99"
+				scale="9.7 2.7 1">
+			</a-video>
+			<!-- 插入文字應用功能 -->
+			<a-text value="NFT" position="0.394 1.967 -4.981" width="11.720" color="white" shader="msdf"
+				font="https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/creepster/Creepster-Regular.json">
+			</a-text>
+
+			<a-text value="Retrogaming, the reflection of nostalgia which continues to live over time. Even in the future, I believe
+				arcade games will still be there, waiting for a new player." position="4.975 0.657 2.342" rotation="0 -90 0 "
+				color=" white" width="1.50" wrapCount="30" font="https://cdn.aframe.io/fonts/KelsonSans.fnt">
+			</a-text>
+			<a-text
+				value="QIANGSHU showcases the movements of the Chinese spear. The original artwork was painted with acrylic on canvas."
+				position="4.975 0.657 -1.881" rotation="0 -90 0 " color=" white" width="1.50" wrapCount="30"
+				font="https://cdn.aframe.io/fonts/KelsonSans.fnt">
+			</a-text>
+			<a-text
+				value="Cornerstone is correlated to seeing what's in front of you and making decisions based on what is in your control. If you want to get to the goal you must not be scared to embark on a new journey. Life is filled with cornerstone moments and you need to be able to figure out what is important and what is not."
+				position="-4.554 2.227 -11.990" color=" black" width="1.990" wrapCount="30">
+			</a-text>
+			<a-text value="K_N6MAA10816 is a self-sufficient model designed to be more human than human.
+				Genetically designed to be human alike, but made without their weaknesses and destructive aspirations.
+				The model has a greater emotional intelligence, surpassing anything that has been known to mankind until today."
+				position="-4.995 0.885 2.176" color=" white" width="1.990" wrapCount="30" rotation="0 90 0">
+			</a-text>
+			<a-text value="There are days where no matter what you do, you can't seem to find a happy place."
+				position="-4.995 0.565 -2.191" color=" white" width="1.990" wrapCount="30" rotation="0 90 0">
+			</a-text>
+			<a-text value="Unique, algorithmically generated Mad Hare living on the blockchain."
+				position="-2.503 0.565 -4.971" color=" white" width="1.990" wrapCount="30" rotation="0 0 0">
+			</a-text>
+
+			<!-- 插入圖片應用功能 -->
+			<a-image src="#art01" position="4.95 1.450 -2.75" width="1.5" height="2" rotation="0 90 0"></a-image>
+			<a-image src="#art02" position="4.95 1.450 1.466" width="1.5" height="2" rotation="0 90 0"></a-image>
+			<a-image src="#art03" position="3.733 1.450 4.997" width="1.5" height="2" rotation="0 0 0"></a-image>
+			<a-image src="#art04" position="0.603 1.450 4.997" width="1.5" height="2" rotation="0 0 0"></a-image>
+			<a-image src="#art05" position="-2.508 1.450 4.997" width="1.5" height="2" rotation="0 0 0"></a-image>
+			<a-image src="#art06" position="-4.941 1.450 3.036" width="1.5" height="2" rotation="0 90 0"></a-image>
+			<a-image src="#art07" position="-4.941 1.450 -1.336" width="1.5" height="2" rotation="0 90 0"></a-image>
+			<a-image src="#art08" position="-3.356 1.450 -4.997" width="1.5" height="2" rotation="0 0 0"></a-image>
+			<!-- 房間外掛應用功能 -->
+			<rw-room id=" MainRoom" material="color: #CCC ; side:double" position="-5 0 -5" length="10" width="10"
+				height="3">
+
+				<rw-wall position="1 0 0" material="src:#wall; repeat:0.5 0.5;side:double">
+					<rw-doorhole id="mainDoor"></rw-doorhole>
+				</rw-wall>
+
+				<rw-wall position=" 1 0 1" material="src:#wall; repeat:0.5 0.5;side:double"></rw-wall>
+				<rw-wall position="0 0 1" material="src:#wall; repeat:0.5 0.5;side:double"></rw-wall>
+				<rw-wall position="0 0 0" material="src:#wall; repeat:0.5 0.5;side:double"></rw-wall>
+				<rw-ceiling material="src:#Ceiling; repeat:0.5 0.5;"></rw-ceiling>
+				<rw-floor material="src:#floor; repeat:0.5 0.5;" shadow></rw-floor>
+			</rw-room>
+
+			<rw-room id="SecondRoom" material="color: #CCC ; side:double" position="-5 0 -12" length="5" width="10"
+				height="3">
+
+				<rw-wall position="1 0 0" material="src:#wall; repeat:0.5 0.5;side:double"></rw-wall>
+				<rw-wall position="1 0 1" material="src:#wall; repeat:0.5 0.5;side:double"></rw-wall>
+				<rw-wall position="0 0 1" material="src:#wall; repeat:0.5 0.5;side:double">
+					<rw-doorhole id="secondDoor"></rw-doorhole>
+				</rw-wall>
+
+				<rw-wall position="0 0 0" material="src:#wall; repeat:0.5 0.5;side:double"></rw-wall>
+				<!-- <rw-celling material="color: yellow;"></rw-celling>-->
+				<rw-ceiling material="src:#Ceiling; repeat:0.5 0.5;"></rw-ceiling>
+				<rw-floor material="src:#floor; repeat:0.5 0.5;" shadow></rw-floor>
+			</rw-room>
+			<rw-doorlink position="1 1 0" from="#mainDoor" to="#secondDoor" width="2" height="2"
+				material="src:#wall; repeat:0.5 0.5;side:double">
+				<rw-ceiling></rw-ceiling>
+				<rw-sides></rw-sides>
+				<rw-floor material="src:#floor; repeat:1 1" shadow></rw-floor>
+			</rw-doorlink>
+			<a-box position="2 0 -10" scale="2 1 0.5" src="#chair" shadow></a-box>
+			<a-box position="-2 0 -10" scale="2 1 0.5" src="#chair" shadow></a-box>
+			<a-box position="0 0 0" scale="10 0.05 10" src="#floor" repeat="4 4" normal-map="#floor-normal"
+				normal-texture-repeat="4 4" roughness-map="#floor-rough" ambient-occlusion-map="#floor-AO"
+				metalness-map="#floor-spec" metalness="0.2" shadow>
+			</a-box>
+			<a-box position="0 0 -9.5" scale="10 0.05 5" src="#floor" repeat="4 2" normal-map="#floor-normal"
+				normal-texture-repeat="4 2" roughness-map="#floor-rough" ambient-occlusion-map="#floor-AO"
+				metalness-map="#floor-spec" metalness="0.2" shadow>
+			</a-box>
+			<a-box position="0 3 0" scale="10 0.05 10" src="#Ceiling" repeat="4 4" normal-map="#Ceiling-normal"
+				normal-texture-repeat="4 4" metalness="0.2" shadow>
+			</a-box>
+			<a-box position="0 3 -9.5" scale="10 0.05 5" src="#Ceiling" repeat="4 2" normal-map="#Ceiling-normal"
+				normal-texture-repeat="4 2" metalness="0.2" shadow>
+			</a-box>
+			<!-- 3D空間燈光應用 -->
+			<!-- <a-light id="ambientLight" type="ambient" color="white" intensity="0.1"></a-light> -->
+			<a-light id="pointLight" type="point" color="white" intensity="0.4" decay="0.8" distance="10"
+				position="-0.6 1.8 -9" cast-shadow="true">
+			</a-light>
+			<a-light id="spotLight" type="spot" color="white" intensity="5" decay="0.8" distance="4"
+				position="0.508 2.866 0.526" rotation="-52.561 17.967 19.454" angle="60" penumbra="0.5">
+			</a-light>
+			<a-light id="spotLight" type="spot" light="angle= " 22.83" cast-shadow="true" decay="-3.28" distance="1.64"
+				intensity="1" penumbra="0.61" shadowCameraFar="50" shadowCameraFov="50" rotation="-90 0 0"
+				position="4.339 5 -3" angle="25">
+			</a-light>
+			<a-light id="spotLight" type="spot" light="angle= " 22.83" cast-shadow="true" decay="-3.28" distance="1.64"
+				intensity="1" penumbra="0.61" shadowCameraFar="50" shadowCameraFov="50" rotation="-90 0 0"
+				position="4.339 5 1.438" angle="25">
+			</a-light>
+			<a-light id="spotLight" type="spot" light="angle= " 22.83" cast-shadow="true" decay="-3.28" distance="1.64"
+				intensity="1" penumbra="0.61" shadowCameraFar="50" shadowCameraFov="50" rotation="-90 0 0"
+				position="-4.528 5 -1.430" angle="25">
+			</a-light>
+			<a-light id="spotLight" type="spot" light="angle= " 22.83" cast-shadow="true" decay="-3.28" distance="1.64"
+				intensity="1" penumbra="0.61" shadowCameraFar="50" shadowCameraFov="50" rotation="-90 0 0"
+				position="-4.518 5 2.980" angle="25">
+			</a-light>
+			<!--<a-light id="spotLight" type="spot" light="angle= " 22.83" cast-shadow="true" decay="-3.28" distance="1.64"
+				intensity="1" penumbra="0.61" shadowCameraFar="50" shadowCameraFov="50" rotation="-90 0 0"
+				position="3.406 5 4.691" angle="25">
+			</a-light>
+			<a-light id="spotLight" type="spot" light="angle= " 22.83" cast-shadow="true" decay="-3.28" distance="1.64"
+				intensity="1" penumbra="0.61" shadowCameraFar="50" shadowCameraFov="50" rotation="-90 0 0"
+				position="0.547 5 4.691" angle="25">
+			</a-light>
+			<a-light id="spotLight" type="spot" light="angle= " 22.83" cast-shadow="true" decay="-3.28" distance="1.64"
+				intensity="1" penumbra="0.61" shadowCameraFar="50" shadowCameraFov="50" rotation="-90 0 0"
+				position="-2.508 5 4.691" angle="25">
+			</a-light>
+			<a-light id="spotLight" type="spot" light="angle= " 22.83" cast-shadow="true" decay="-3.28" distance="1.64"
+				intensity="1" penumbra="0.61" shadowCameraFar="50" shadowCameraFov="50" rotation="-90 0 0"
+				position="-3.294 5 -4.391" angle="25">
+			</a-light> -->
+
+			<!-- <a-light id="hemisphereLight" type="hemisphere" position="-2 1.8 1.8" intensity="0.1"></a-light>
+			<a-light id="hemisphereLight" type="hemisphere" position="-2 1.5 -10" intensity="0.1"></a-light> -->
+
+			<a-gltf-model src="#sculpture" position="0 0 -1"></a-gltf-model>
+
+		</a-scene>
+	</body>
+
+</html>
